@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+
+import re
+
+vector_lines = []
+print("Paste four vectors:\n")
+for i in range(4):
+    line = input()
+    vector_lines.append(line)
+    if not (line[0] == "(" and line[-1] == ")"):
+        raise Exception("Invalid")
+
+
+filename = "/home/hypnos/SARndbox-2.6/etc/SARndbox-2.6/BoxLayout.txt"
+with open(filename, "r") as f:
+    lines = f.readlines()
+with open(filename, "w") as f:
+    f.write(lines[0] + "\n" + "\n".join(vector_lines))

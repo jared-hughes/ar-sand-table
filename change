@@ -1,0 +1,2 @@
+#!/bin/bash
+echo $@ > ~/SARndbox-2.6/share/SARndbox-2.6/Control.fifo

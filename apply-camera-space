@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+
+import sys
+import re
+
+equation_re = r"^Camera-space plane equation: x \* (\(.*\)) = (-?\d*(\.\d*)?)$"
+
+match = None
+while match is None:
+    equation_str = input("Paste camera space equation:\n")
+    match = re.match(equation_re, equation_str)
+    if match is None:
+        print("Invalid")
+        print(
+            "Expected something like `Camera-space plane equation: x * (0.00765363, 0.0219367, 0.99973) = -89.77`"
+        )
+
+filename = "/home/hypnos/SARndbox-2.6/etc/SARndbox-2.6/BoxLayout.txt"
+with open(filename, "r") as f:
+    lines = f.readlines()
+lines[0] = f"{match[1]}, {match[2]}"
+with open(filename, "w") as f:
+    f.write("\n".join(lines))
