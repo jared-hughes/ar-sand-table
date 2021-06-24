@@ -1,3 +1,3 @@
 #!/bin/bash
-./tide &
-./bin/SARndbox -uhm -fpv -nas 20 -evr -0.03 -rs 0.5 -cp ~/SARndbox-2.6/share/SARndbox-2.6/Control.fifo
+~/ar-sand-table/tide &
+~/SARndbox-2.6/bin/SARndbox -uhm -fpv -nas 20 -evr -0.03 -rs 0.5 -cp ~/SARndbox-2.6/share/SARndbox-2.6/Control.fifo

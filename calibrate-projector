@@ -1,0 +1,2 @@
+#!/bin/bash
+~/SARndbox-2.6/bin/CalibrateProjector -s 1600 1200

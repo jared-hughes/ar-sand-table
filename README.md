@@ -44,30 +44,19 @@ Operating instructions/scripts and parts list. Currently working on making recal
 - Mouse (not optional)
 - Power strip (depending on needs)
 
-## Hardware Setup
+## Running instructions
 
-1. Assemble wood parts of table and connect metal pipes (hangman shape)
-
-2. Connect Kinect:
-
-   - Using the attached magnet, stick the kinect above the center of the sand table
-   - Should be approximately near the bottom of the top stick
-   - PHOTO
-
-3. Connect Projector
-
-   - The two bolts at the back of the mount hook onto the top pipe into the two holes.
-   - PHOTO
-
-4. The wires can be pulled through the pipes if desired
+- Run `cd ~/ar-sand-table` before doing anything
+- Run the display using `./sandbox` in terminal
+- `./lava` and `./water` to quickly swap liquid shaders (activate by spreading hand with wide gap between fingers)
 
 ## Recalibration instructions
 
 [Original software installation instructions](http://idav.ucdavis.edu/~okreylos/ResDev/SARndbox/LinkSoftwareInstallation.html) ([archived](http://web.archive.org/web/20190922124245/http://idav.ucdavis.edu/~okreylos/ResDev/SARndbox/LinkSoftwareInstallation.html)), but it should already be installed on the laptop.
 
-1. Enter the main directory
+1. Enter the helper directory
 
-   - $ `cd ~/SARndbox-2.6`
+   - `$ cd ~/ar-sand-table`
    - Tip: copy-paste in terminal: ctrl-SHIFT-v or ctrl-SHIFT-c
    - Tip: press TAB for autocomplete
 
@@ -122,7 +111,7 @@ Operating instructions/scripts and parts list. Currently working on making recal
 
 6. Match the Projector and Camera
 
-   - `$ ./bin/CalibrateProjector -s 1600 1200`
+   - `$ ./calibrate-projector`
    - Drag into the projector window
    - Press F11
    - Press 2
@@ -130,10 +119,3 @@ Operating instructions/scripts and parts list. Currently working on making recal
    - Press 1 after lining up the lollipop to capture a tie point
    - Make sure the terminal has no error at the end ... otherwise press ctrl+c in the terminal to restart the calibration process
    - (step 11 in the software installation instructions above)
-
-## Running instructions
-
-## Other scripts for convenience
-
-- Run using `./sandbox` in terminal
-- `./lava` and `./water` to quick swap liquid shaders (activate by spreading hand with wide gap between fingers)

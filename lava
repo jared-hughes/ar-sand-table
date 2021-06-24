@@ -1,3 +1,3 @@
 #!/bin/bash
 cp ~/SARndbox-2.6/share/SARndbox-2.6/Shaders/SurfaceAddWaterColor-Lava.fs ~/SARndbox-2.6/share/SARndbox-2.6/Shaders/SurfaceAddWaterColor.fs
-./change waterAttenuation 0.97
+~/ar-sand-table/change waterAttenuation 0.97
