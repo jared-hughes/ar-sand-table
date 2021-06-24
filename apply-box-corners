@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-import re
-
 vector_lines = []
 print("Paste four vectors:\n")
 for i in range(4):

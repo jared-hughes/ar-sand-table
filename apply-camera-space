@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import sys
 import re
 
 equation_re = r"^Camera-space plane equation: x \* (\(.*\)) = (-?\d*(\.\d*)?)$"

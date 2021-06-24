@@ -2,6 +2,8 @@
 
 Operating instructions/scripts and parts list. Currently working on making recalibration instructions easier through more python scripts.
 
+[Source](https://github.com/jared-hughes/ar-sand-table)
+
 ## Parts List
 
 - BenQ Box
