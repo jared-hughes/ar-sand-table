@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon=lava
+Exec=/home/hypnos/ar-sand-table/lava
+Comment[en_US]=
+Name=Switch to lava shader
+Comment=

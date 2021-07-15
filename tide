@@ -1,52 +1,51 @@
-#!/usr/bin/env python3
+#!/bin/python3
 import subprocess
 import time
 import math
 
-storage_path = "/home/hypnos/SARndbox-2.6/share/tideStorage.txt"
+storagePath = "/home/hypnos/SARndbox-2.6/share/tideStorage.txt"
 # cm
 average_height = -100
 amplitude = 1
 # ms
 refreshPeriod = 50
 t = 0
-tidePeriod = 50 * 1000
-
+tidePeriod = 50*1000
 
 def getHeight(t):
     return average_height + amplitude * math.cos(t / tidePeriod * 2 * math.pi)
-
-
+    
 def getT(height):
     return math.acos((height - average_height) / amplitude) * tidePeriod / 2 / math.pi
+    
+print("Starting tide process")
 
-
-with open(storage_path, "r") as f:
+with open(storagePath, "r") as f:
     try:
         contents = f.read()
         height = float(contents)
         t = getT(height)
     except:
         print("Could not load existing tide level")
-
+    
 try:
     while True:
         t += refreshPeriod
         height = getHeight(t)
         command = [
-            "/home/hypnos/SARndbox-2.6/change",
+            "/home/hypnos/ar-sand-table/change",
             "heightMapPlane",
             "-0.0317717",
             "0.0380449",
             "0.998771",
-            str(height),
+            str(height)
         ]
         subprocess.call(command)
         time.sleep(refreshPeriod / 1000)
 except:
-    with open(storage_path, "w") as f:
+    with open(storagePath, "w") as f:
         try:
-            f.write(str(height) + "\n")
-            print("Done saving tide level")
+            f.write(str(height) + "\n");
+            print("Done saving tide level");
         except:
             print("Could not save tide level")
